@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Welcome to the Matilda´s home assignment for piktiv</h1>
+    <p>Here is some text about why you should register for this application Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum repellat pariatur aspernatur excepturi blanditiis, nisi aliquam. Explicabo facere, vitae maxime corrupti ad ducimus dolorum inventore eligendi, exercitationem odit cupiditate!</p>
+    <button @click="goTo">Click me for regestration</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  methods: {
+    goTo() {
+      this.$router.push('/registration');
+    }
   }
 }
 </script>
+
+<style scoped>
+    div {
+        margin: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
